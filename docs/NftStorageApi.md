@@ -1,6 +1,6 @@
 # NftStorageApi
 
-All URIs are relative to *https://nft.storage/api*
+All URIs are relative to *https://api.nft.storage*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -31,7 +31,7 @@ import storage.nft.api.NftStorageApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://nft.storage/api");
+    defaultClient.setBasePath("https://api.nft.storage");
     
     // Configure HTTP bearer authorization: bearerAuth
     HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 
 <a name="list"></a>
 # **list**
-> ListResponse list()
+> ListResponse list(before, limit)
 
 List all stored files
 
@@ -99,15 +99,17 @@ import storage.nft.api.NftStorageApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://nft.storage/api");
+    defaultClient.setBasePath("https://api.nft.storage");
     
     // Configure HTTP bearer authorization: bearerAuth
     HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
     bearerAuth.setBearerToken("BEARER TOKEN");
 
     NftStorageApi apiInstance = new NftStorageApi(defaultClient);
+    OffsetDateTime before = OffsetDateTime.now(); // OffsetDateTime | Return results created before provided timestamp
+    Integer limit = 10; // Integer | Max records to return
     try {
-      ListResponse result = apiInstance.list();
+      ListResponse result = apiInstance.list(before, limit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NftStorageApi#list");
@@ -121,7 +123,11 @@ public class Example {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **before** | **OffsetDateTime**| Return results created before provided timestamp | [optional]
+ **limit** | **Integer**| Max records to return | [optional] [default to 10]
 
 ### Return type
 
@@ -165,7 +171,7 @@ import storage.nft.api.NftStorageApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://nft.storage/api");
+    defaultClient.setBasePath("https://api.nft.storage");
     
     // Configure HTTP bearer authorization: bearerAuth
     HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");
@@ -235,7 +241,7 @@ import storage.nft.api.NftStorageApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://nft.storage/api");
+    defaultClient.setBasePath("https://api.nft.storage");
     
     // Configure HTTP bearer authorization: bearerAuth
     HttpBearerAuth bearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("bearerAuth");

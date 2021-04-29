@@ -12,8 +12,9 @@ Name | Type | Description | Notes
 **miner** | **String** | Miner ID |  [optional]
 **network** | [**NetworkEnum**](#NetworkEnum) | Filecoin network for this Deal |  [optional]
 **pieceCid** | **String** | Piece CID string |  [optional]
-**status** | [**StatusEnum**](#StatusEnum) | Deal Status | 
-**statusText** | **String** | Deal Status Description |  [optional]
+**status** | [**StatusEnum**](#StatusEnum) | Deal status | 
+**statusText** | **String** | Deal status description. |  [optional]
+**chainDealID** | **BigDecimal** | Identifier for the deal stored on chain. |  [optional]
 **dealActivation** | **String** | This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: YYYY-MM-DDTHH:MM:SSZ. |  [optional]
 **dealExpiration** | **String** | This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: YYYY-MM-DDTHH:MM:SSZ. |  [optional]
 
