@@ -1,5 +1,7 @@
 # nft.storage-client
 
+_This client was generated via the OpenAPI schema and is experimental, unsupported, and may not work at all!_
+
 NFT Storage API
 - API version: 1.0
   - Build date: 2021-04-29T12:41:03.666Z[GMT]
