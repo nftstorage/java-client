@@ -54,7 +54,9 @@ public class NFT {
     DIRECTORY("directory"),
     
     IMAGE_JPEG("image/jpeg"),
-    
+
+    IMAGE_PNG("image/png"),
+
     APPLICATION_JSON("application/json"),
     
     OTHER_MIME_TYPES("other mime types");
